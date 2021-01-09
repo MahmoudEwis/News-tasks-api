@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>News</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a id="home" onclick="departmentdata(this)" class="navbar-brand" >News</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a id="Home" onclick="departmentdata(this)" class="navlink red " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a id="News" onclick="departmentdata(this)" class="navlink" >News</a>
+              </li>
+              <li class="nav-item">
+                <a id="Sports" onclick="departmentdata(this)" class="navlink" >Sports</a>
+              </li>
+              <li class="nav-item">
+                <a id="Reel" onclick="departmentdata(this)" class="navlink" >Reel</a>
+              </li>
+              <li class="nav-item">
+                <a id="Worklife" onclick="departmentdata(this)" class="navlink">Worklife</a>
+              </li>
+              <li class="nav-item">
+                <a id="Future" onclick="departmentdata(this)" class="navlink" >Future</a>
+              </li>
+              <li class="nav-item">
+                <a id="culture" onclick="departmentdata(this)"  class="navlink">Culture</a>
+              </li>
+              <li class="nav-item">
+                <a id="weather" onclick="departmentdata(this)" class="navlink" >Weather</a>
+              </li>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle p-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    Country
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li id="eg"><button class="dropdown-item" type="button">Egypt </button>
+                    <ul class="submenu dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button  class="dropdown-item category" type="button">business</button></li>
+                        <li><button   class="dropdown-item category" type="button">sport</button></li>
+                        <li><button  class="dropdown-item category" type="button">health</button></li>
+                      </ul>
+                </li>
+                  <li id="US"><button class="dropdown-item" type="button">United States of America</button>
+                    <ul class="submenu dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button  class="dropdown-item category" type="button">business</button></li>
+                        <li><button   class="dropdown-item category" type="button">sport</button></li>
+                        <li><button  class="dropdown-item category" type="button">health</button></li>
+                      </ul>
+                </li>
+                  <li id="DE" ><button class="dropdown-item" type="button">Germany</button>
+                    <ul class="submenu dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button  class="dropdown-item category" type="button">business</button></li>
+                        <li><button   class="dropdown-item category" type="button">sport</button></li>
+                        <li><button  class="dropdown-item category" type="button">health</button></li>
+                      </ul>
+                  </li>
+                  <li id="FR" ><button class="dropdown-item" type="button">France</button>
+                    <ul class="submenu dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button  class="dropdown-item category" type="button">business</button></li>
+                        <li><button   class="dropdown-item category" type="button">sport</button></li>
+                        <li><button  class="dropdown-item category" type="button">health</button></li>
+                      </ul>
+                  </li>
+                  <li id="SA" ><button class="dropdown-item" type="button">Saudi Arabia</button>
+                    <ul class="submenu dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button  class="dropdown-item category" type="button">business</button></li>
+                        <li><button   class="dropdown-item category" type="button">sport</button></li>
+                        <li><button  class="dropdown-item category" type="button">health</button></li>
+                      </ul>
+                  </li>
+                  <li id="GB" ><button class="dropdown-item" type="button">United Kingdom</button>
+                    <ul class="submenu dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button  class="dropdown-item category" type="button">business</button></li>
+                        <li><button   class="dropdown-item category" type="button">sport</button></li>
+                        <li><button  class="dropdown-item category" type="button">health</button></li>
+                      </ul>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+            <form class="d-flex">
+              <input onkeyup="search(this.value)" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+          <div id="data-row" class="row">
+
+          </div>
+      </div>
+      <div id="btnUp">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+      <div id="loading">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+      </div>
+
+      <script src="js/jquery-3.5.1.min.js"></script>
+      <script src="js/getdata.js"></script>
+</body>
+</html>
